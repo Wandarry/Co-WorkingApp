@@ -7,7 +7,11 @@ import Header from '../components/header';
 import Available from '../components/available';
 import TabNavigator from '../components/bottomNavigation';
 
-export default function HomeScreen() {
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
+
+export default function HomeScreen({navigation}) {
     return (
         <SafeAreaView style={{marginTop: 50, marginLeft: 15, marginRight: 15}}>
            <Header />
@@ -20,7 +24,7 @@ export default function HomeScreen() {
 
             <Available />
 
-            <TabNavigator />
+            
         </SafeAreaView>
     )
-}
+};

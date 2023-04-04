@@ -1,8 +1,15 @@
 import React from 'react';
-import { Button, SafeAreaView, TouchableOpacity } from 'react-native';
+import { SafeAreaView, TouchableOpacity } from 'react-native';
 import { Text, View, Image, TextInput } from 'react-native';
+import HomeScreen from './homeScreen';
 
-export default function RegisterScreen () {
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
+
+export default function RegisterScreen ({navigation}) {
     return (
         <SafeAreaView style={{marginTop: 50, marginLeft: 15, marginRight: 15}}>
             <Text style={{fontSize:30, textAlign: 'center', color: '#366ACF'}}>Register</Text>
@@ -27,7 +34,7 @@ export default function RegisterScreen () {
                 <TextInput placeholder='Password' secureTextEntry={true} />
             </View>
 
-            <TouchableOpacity style={{marginTop: 20 ,backgroundColor:'#366ACF', padding: 18, borderRadius:50}}>
+            <TouchableOpacity style={{marginTop: 20 ,backgroundColor:'#366ACF', padding: 18, borderRadius:50}} onPress = { () => navigation.navigate('HomeScreen')} >
                 <Text style = {{color:'white', textAlign:'center'}}>Create Account</Text>
             </TouchableOpacity>
 

@@ -1,11 +1,15 @@
 import React from 'react';
 import { SafeAreaView, TouchableOpacity } from 'react-native';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import RegisterScreen from './registerScreen';
 
-import {createStackNavigator} from 'react-navigation-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 
-export default function SplashScreen() {
+export default function SplashScreen({navigation}) {
  
     return(
       <SafeAreaView>
@@ -16,7 +20,7 @@ export default function SplashScreen() {
         <Text style={{fontSize: 16}}>Whether you need a quiet desk for a few hours or a dedicated office space for your team, our app has got you covered</Text>
   
         <View style= {{marginTop: 20, display:'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-          <TouchableOpacity style={{width: 144, height: 57, backgroundColor: '#366ACF', borderRadius: 50, alignItems: 'center', padding: 15}}>
+          <TouchableOpacity style={{width: 144, height: 57, backgroundColor: '#366ACF', borderRadius: 50, alignItems: 'center', padding: 15}} onPress={ () => navigation.navigate('RegisterScreen')} >
             <Text style={{color:'white', fontSize: 16}}>Register</Text>
           </TouchableOpacity>
   
