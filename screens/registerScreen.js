@@ -34,7 +34,7 @@ export default function RegisterScreen ({navigation}) {
                 <TextInput placeholder='Password' secureTextEntry={true} />
             </View>
 
-            <TouchableOpacity style={{marginTop: 20 ,backgroundColor:'#366ACF', padding: 18, borderRadius:50}} onPress = { () => navigation.navigate('HomeScreen')} >
+            <TouchableOpacity style={{marginTop: 20 ,backgroundColor:'#366ACF', padding: 18, borderRadius:50}} onPress = { () => navigation.navigate('Homescreen')} >
                 <Text style = {{color:'white', textAlign:'center'}}>Create Account</Text>
             </TouchableOpacity>
 

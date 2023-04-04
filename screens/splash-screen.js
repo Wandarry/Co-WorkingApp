@@ -20,7 +20,7 @@ export default function SplashScreen({navigation}) {
         <Text style={{fontSize: 16}}>Whether you need a quiet desk for a few hours or a dedicated office space for your team, our app has got you covered</Text>
   
         <View style= {{marginTop: 20, display:'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-          <TouchableOpacity style={{width: 144, height: 57, backgroundColor: '#366ACF', borderRadius: 50, alignItems: 'center', padding: 15}} onPress={ () => navigation.navigate('RegisterScreen')} >
+          <TouchableOpacity style={{width: 144, height: 57, backgroundColor: '#366ACF', borderRadius: 50, alignItems: 'center', padding: 15}} onPress={ () => navigation.navigate('Registerscreen')} >
             <Text style={{color:'white', fontSize: 16}}>Register</Text>
           </TouchableOpacity>
   
