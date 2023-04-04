@@ -2,9 +2,14 @@ import React from 'react';
 import { SafeAreaView, TouchableOpacity } from 'react-native';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
+import {createStackNavigator} from 'react-navigation-stack';
+
+
 export default function SplashScreen() {
+ 
     return(
-      <View>
+      <SafeAreaView>
+        
         <Image style={{marginTop: 20}} source={require('../assets/images/amico.png')} />
         <View style={styles.container}>
         <Text style={{color: '#366ACF', fontSize: 30}}>Coworking made easy - find your perfect spot today</Text>
@@ -20,7 +25,7 @@ export default function SplashScreen() {
           </TouchableOpacity>
         </View>
         </View>
-      </View>
+      </SafeAreaView>
     ) 
   }
   
